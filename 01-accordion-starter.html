@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Component</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+      /* 
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .accordion{
+        width: 700px;
+        margin: 100px auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .number{
+        font-size: 24px;
+        font-weight: 400;
+        color: aquamarine;
+      }
+      .item{
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0);
+        padding: 24px;
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+      }
+      .number,.text{
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .icon{
+        width: 24px;
+        height: 24px;
+        stroke: aqua;
+      }
+      .hidden-box{
+        grid-column: 2/3;
+        display: none;
+      }
+      .hidden-box p{
+        line-height: 1.5;
+        margin-bottom: 24px;
+
+      }
+      .hidden-box ul{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 20px;
+        color: lightslategray;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .open{
+        border-top: 8px solid aquamarine;
+
+      }
+      .open .hidden-box{
+        display: block;
+      }
+      .open .number,.open .text{
+       color: aquamarine; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="item">
+      <p class="number">01</p>
+      <p class="text">Project net worth over time</p>
+      <svg xmln="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.251-7.5 7.5-7.5-7.5"></path>
+      </svg>
+
+      <div class="hidden-box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit Earum placeat fugiat molestiae eaque dignissimos<br>
+          provident maxime nesciunt,  ex similique veniam consectetur nero, doloribus quam cum, voluptatibus distinctio soluta.
+          <br>ID, temporibus. 
+        </p>
+        <ul>
+          <li>Nakroth</li>
+          <li>Tulen</li>
+          <li>Lilian</li>
+          <li>Tel Annas</li>
+        </ul>
+      </div>
+      <div class="item open">
+      <p class="number">02</p>
+      <p class="text">Incorporate the essential data</p>
+      <svg xmln="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.251-7.5 7.5-7.5-7.5"></path>
+      </svg>
+
+      <div class="hidden-box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit Earum placeat fugiat molestiae eaque dignissimos<br>
+          provident maxime nesciunt,  ex similique veniam consectetur nero, doloribus quam cum, voluptatibus distinctio soluta.
+          <br>ID, temporibus. 
+        </p>
+        <ul>
+          <li>Nakroth</li>
+          <li>Tulen</li>
+          <li>Lilian</li>
+          <li>Tel Annas</li>
+        </ul>
+      </div>
+      </div>
+   
+      </div>
+  </div>
+  </body>
+</html>
